@@ -8,7 +8,7 @@ BOT_WORKERS = int(os.environ.get("BOT_WORKERS", "4"))
 APP_ID = int(os.environ.get("APP_ID", "26724473"))
 API_HASH = os.environ.get("API_HASH", "7bc7d1f9b2f3d3f1bfd272db56ac0ba1")
 
-LOG_CHANNEL_ID = int(os.environ.get("LOG_CHANNEL_ID", "-1002044478374"))
+LOG_CHANNEL_ID = int(os.environ.get("LOG_CHANNEL_ID", "-4107638654"))
 
 MONGO_DB_URI = os.environ.get("MONGO_DB_URI", "mongodb+srv://0852:0852@cluster0.7ucs9c3.mongodb.net/?retryWrites=true&w=majority")
 DB_NAME = os.environ.get("DB_NAME", "CleanZb")
