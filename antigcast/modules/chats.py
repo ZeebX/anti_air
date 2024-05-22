@@ -13,14 +13,13 @@ from antigcast.helpers.tools import *
 from antigcast.helpers.database import *
 
 
-@Bot.on_message(filters.command("addgc") & filters.user(OWNER_ID))
+@Bot.on_message(filters.command("akses") & filters.user(OWNER_ID))
 async def addgcmessag(app : Bot, message : Message):
     chat_id = message.chat.id
     chat_name = message.chat.title
     hari = get_arg(message)
     if not hari:
         hari = "30"
-    xxnx = await message.reply(f"`Menambahakan izin dalam grup ini..`")
     now = datetime.datetime.now(timezone("Asia/Jakarta"))
     expired = now + relativedelta(days=int(hari))
     expired_date = expired.strftime("%d-%m-%Y")
