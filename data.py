@@ -2,21 +2,21 @@ from pyrogram.types import InlineKeyboardButton
 
 
 class Data:
-    generate_single_button = [InlineKeyboardButton("Tambahkan ke grup", url="https://t.me/AntiBroadcastPyro_Bot?startgroup=true")]
+    generate_single_button = [InlineKeyboardButton("Add me your group", url="https://t.me/AntiBroadcastPyro_Bot?startgroup=true")]
 
     home_buttons = [
         generate_single_button,
-        [InlineKeyboardButton(text="Kembali", callback_data="home")]
+        [InlineKeyboardButton(text="Return home", callback_data="home")]
     ]
 
     generate_button = [generate_single_button]
 
     buttons = [
         generate_single_button,
-        [InlineKeyboardButton("Chanel", url="https://t.me/ZeebSupport")],
+        [InlineKeyboardButton("Channel", url="https://t.me/RuangZeeb")],
         [
-            InlineKeyboardButton("Perintah", callback_data="help"),
-            InlineKeyboardButton("Bantuan", callback_data="about")
+            InlineKeyboardButton("Command", callback_data="help"),
+            InlineKeyboardButton("Support", callback_data="about")
         ],
         [InlineKeyboardButton("Owner", url="https://t.me/Zeebdisini")],
     ]
