@@ -21,7 +21,7 @@ async def antigcaston(app : Bot, message : Message):
     hari = get_arg(message)
     if not hari:
         hari = "30"
-    xxnx = await message.reply(f"`Anti Gcast berhasil di aktifkan!`")
+    xxnx = await message.reply(f"`Anti Gcast activated successfully!`")
     now = datetime.datetime.now(timezone("Asia/Jakarta"))
     expired = now + relativedelta(days=int(hari))
     expired_date = expired.strftime("%d-%m-%Y")
@@ -39,7 +39,7 @@ async def antigcaston(app : Bot, message : Message):
     except BaseException as e:
         print(e)
 
-    await xxnx.edit(f"Anti Gcast on in group : \n`{chat_name}`")
+    await xxnx.edit(f"`Anti Gcast on in group:`\n`{chat_name}`")
     await asyncio.sleep(10)
     await xxnx.delete()
     await message.delete()
@@ -51,14 +51,14 @@ async def antigcastoff(app : Bot, message : Message):
     if not chat_id:
         chat_id = message.chat.id
         
-    xxnx = await message.reply(f"`Anti Gcast berhasil di nonaktifkan!`")
+    xxnx = await message.reply(f"`Anti Gcast deactivated successfully!`")
     try:
         await rem_actived_chat(chat_id)
         await rem_expired_date(chat_id)
     except BaseException as e:
         print(e)
 
-    await xxnx.edit(f"Anti Gcast berhasil di nonaktifkan di `{chat_id}`, bot akan stop menghapus gcast!`")
+    await xxnx.edit(f"`Anti Gcast Deactivated successfully`\n`{chat_id}`")
     await asyncio.sleep(10)
     await xxnx.delete()
     await message.delete()
