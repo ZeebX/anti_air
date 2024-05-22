@@ -7,7 +7,7 @@ def filter(cmd: str):
     return filters.private & filters.incoming & filters.command(cmd)
 
 
-# Start dante
+# Start Zeeb
 @Client.on_message(filter("start"))
 async def start(Bot: Client, msg: Message):
     user = await Bot.get_me()
@@ -19,7 +19,7 @@ async def start(Bot: Client, msg: Message):
     )
 
 
-# Help dante
+# Help Zeeb
 @Client.on_message(filter("help"))
 async def _help(Bot: Client, msg: Message):
     await Bot.send_message(
